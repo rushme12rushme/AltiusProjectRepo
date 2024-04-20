@@ -39,6 +39,7 @@ public class ProjectModule  extends BaseClass{
 			WebElement actual=driver.findElement(By.xpath("(//div[@class='title ellipsis'])[3]"));
 		String exp_projectName=fl.getExcelFileData("CreateProject", 1, 0);
 					assertEquals(actual.getText(),exp_projectName);
+					Reporter.log("Project Module End",true);
 					
 
 			
