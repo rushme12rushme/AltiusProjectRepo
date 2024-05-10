@@ -1,5 +1,6 @@
-package com.altius.generic;
+package generic;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -10,12 +11,18 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 
-public class BaseClass {
+
+
+
+
+
+public class BaseClass {	
 	public static WebDriver driver;
 	@BeforeClass
 	public void OpenBrowser() {
-		
+		System.out.println("OPen browser");
 		 driver =new ChromeDriver();
 		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
@@ -27,15 +34,22 @@ public class BaseClass {
 	}
 	
 	@BeforeMethod
-	public void Login() {
 	
-		driver.get("http://192.168.222.128:8080");
-		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.findElement(By.name("j_username")).sendKeys("rashmi@dell.com");
-		driver.findElement(By.id("passWord")).sendKeys("123456");
-		driver.findElement(By.xpath("//input[@title='Sign In']")).click();
-		Reporter.log("Login");
-		}
+	
+		public void login() throws IOException
+		{
+		Reporter.log("Login",true);
+		FileLib fl=new FileLib();
+		
+		String url=fl.getPropertyFileData("url");
+		driver.get(url);
+		String un=fl.getPropertyFileData("username");
+		String pwd=fl.getPropertyFileData("pwd");
+		driver.findElement(By.name("username")).sendKeys(un);
+		driver.findElement(By.name("pwd")).sendKeys(pwd);
+		driver.findElement(By.id("loginButton")).click();
+
+	}
 	
 	
 	@AfterMethod

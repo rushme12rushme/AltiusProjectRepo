@@ -9,39 +9,39 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class CampaignPage {
-	@FindBy (xpath="//input[@name='property(Campaign Name)']")
+	@FindBy (name="(property(Campaign Name))")
 	private WebElement CampaignNametxtbx;
 	
-	@FindBy (xpath="//input[@name='property(Start Date)']")
+	@FindBy (name="(property(Start Date)")
 	private WebElement StartDatetbx;
 	
-	@FindBy (xpath="//input[@name='property(Expected Revenue)']")
+	@FindBy (name="property(Expected Revenue)")
 	private WebElement ExpectedRevenuetbx;
 	
-	@FindBy (xpath="//input[@name='property(Actual Cost)']")
+	@FindBy (name="property(Actual Cost)")
 	private WebElement ActualCosttbx;
 	
 
-	@FindBy (xpath="//input[@name='property(Num sent)']")
+	@FindBy (name="property(Num sent)")
 	private WebElement NumSenttbx;
 	
 
-	@FindBy (xpath="//select[@name='property(Type)']")
+	@FindBy (name="property(Type)")
 	private WebElement CampaignTypeDropDown;
 	
-	@FindBy (xpath="//select[@name='property(Status)']")
+	@FindBy (name="property(Status)")
 	private WebElement CampaignStatusDropDown;
 
-	@FindBy (xpath="//input[@name='property(End Date)']")
+	@FindBy (name="property(End Date)")
 	private WebElement EndDatetbx;
 	
 	@FindBy (xpath="//input[@name='property(Budgeted Cost)']")
 	private WebElement BudgetedCosttbx;
 	
-	@FindBy (xpath="//input[@name='property(Expected Response)']")
+	@FindBy (name="property(Expected Response)")
 	private WebElement ExpectedResponsetbx;
 	
-	@FindBy (xpath="//textarea[@name='property(Description)']")
+	@FindBy (name="property(Description)")
 	private WebElement Descriptiontbx;
 	
 	@FindBy (xpath="(//input[@value='Save'])[2]")
@@ -68,6 +68,7 @@ public class CampaignPage {
 		ExpectedResponsetbx.sendKeys("1000");
 		Descriptiontbx.sendKeys("Demo Description");
 		SaveBtn.click();
+		//use gettext to check the text using assert
 	}
 	}
 	

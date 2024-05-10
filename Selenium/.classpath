@@ -58,5 +58,14 @@
 	<classpathentry kind="lib" path="jar/xmlbeans-5.1.1.jar"/>
 	<classpathentry kind="lib" path="jar/xmlgraphics-commons-2.6.jar"/>
 	<classpathentry kind="lib" path="jar/xmlsec-3.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rushm/.m2/repository/io/cucumber/cucumber-java/7.15.0/cucumber-java-7.15.0.jar" sourcepath="C:/Users/rushm/.m2/repository/io/cucumber/cucumber-java/7.15.0/cucumber-java-7.15.0-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="io.cucumber"/>
+			<attribute name="maven.artifactId" value="cucumber-java"/>
+			<attribute name="maven.version" value="7.15.0"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

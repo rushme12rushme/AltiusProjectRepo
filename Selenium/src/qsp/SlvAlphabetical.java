@@ -33,6 +33,8 @@ public class SlvAlphabetical {
 		}
 		//sortedList.sort(null);
 		Collections.sort(sortedList);
+	int []a= {1,2,3,4};
+	Arrays.sort
 		System.out.println(sortedList);
 		
 		//without duplicates
